@@ -2,15 +2,13 @@
 <body>
 	<H1>IFRAME!</H1>
 	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/sw.js')
-				.then(registration => {
-					console.log('sw regstered');
-				})
-				.catch(err => {
-					console.error(err);
-				});
-		}
+		(() => {
+			let id = localStorage.getItem('id') || null;
+			if (!id) {
+				id = Math.random();
+				localStorage.setItem('id', id);
+			}
+			console.log(`id:${id}`);
+		})();
 	</script>
-	<img src="blick.jpg">
 </body>
