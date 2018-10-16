@@ -7,9 +7,9 @@ $ openssl req -new -x509 -sha256 -newkey rsa:2048 -days 365 -nodes -out ./pem.pe
 
 ```sh
 $ /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost:4433 --allow-insecure-localhost --user-data-dir=~/chrome
-$ open https://localhost:4433/
 ```
 
 ```sh
 $ docker-compose up
+$ open http://localhost:8080
 ```
