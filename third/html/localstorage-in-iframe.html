@@ -1,0 +1,16 @@
+<!doctype html>
+<body>
+	<H1>IFRAME!</H1>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js')
+				.then(registration => {
+					console.log('sw regstered');
+				})
+				.catch(err => {
+					console.error(err);
+				});
+		}
+	</script>
+	<img src="blick.jpg">
+</body>
